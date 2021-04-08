@@ -1,24 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { CounterWithLocalStore, CounterWithOutStore } from './Component/counter';
+import { Sum2Number, Todo } from './Component';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <h3>Count Component with two ways use store</h3>
+      <CounterWithLocalStore/>
+      <CounterWithOutStore/>
+      </div>
+      <hr />
+      <div>
+        <h3>Sum two number, use WHEN and AUTORUN function</h3>
+      <Sum2Number/>
+      </div>
+      <hr />
+      <div>
+        <h3>Todo component use REACTION</h3>
+        <Todo/>
+      </div>
     </div>
   );
 }
